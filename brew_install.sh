@@ -12,6 +12,9 @@ echo 'eval "$(homebrew/bin/brew shellenv)"' >> ~/.zshrc
 echo '#Brew Shell Completion'$'\n''if type brew &>/dev/null'$'\n''then'$'\n''  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"'$'\n'$'\n''  autoload -Uz compinit'$'\n''  compinit'$'\n''fi' >> ~/.zshrc
 #Change default appdir as Guest users can't access /Applications folder
 echo 'export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=~/Applications"' >> ~/.zshrc
-echo 'export HOMEBREW_NO_CLEANUP=TRUE' >> ~/.zshrc
+echo 'export HOMEBREW_NO_INSTALL_CLEANUP=TRUE' >> ~/.zshrc
+echo 'export HOMEBREW_INSTALL_BADGE="🤨📸"' >> ~/.zshrc
+echo 'export HOMEBREW_MAKE_JOBS=8' >> ~/.zshrc
+
 #Finish message
 echo "Homebrew installation (untar) is finished, please restart your terminal instance to use homebrew!"
